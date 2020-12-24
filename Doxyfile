@@ -1,0 +1,5 @@
+PROJECT_NAME = Dilemme du prisonnier
+FILE_PATTERNS = *.c *.h
+INPUT = ./client_app ./client_app/socket ./client_app/controller ./client_app/views ./client_app/glade ./config ./config/gameConfig ./protocol ./server_app ./server_app/src ./server_app/utils
+GENERATE_HTML = YES
+EXTRACT_ALL = YES

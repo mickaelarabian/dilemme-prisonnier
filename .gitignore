@@ -1,0 +1,11 @@
+*.out
+.vscode/
+build/
+*.o
+server
+client
+*.csv
+/latex
+/html
+testClient
+testServer

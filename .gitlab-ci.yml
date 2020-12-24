@@ -1,0 +1,35 @@
+stages:
+  - build
+  - test
+
+image: gcc
+
+build project:
+  stage: build
+  script: 
+    # install dependencies
+    - apt-get update 
+    - apt-get -y install sudo
+    - sudo apt-get -y install libgtk-3-dev
+    # build project
+    - make all
+
+# unit test server
+unit test server:
+  stage: test
+  script:
+    # compile test server
+    - make testServer
+    # run unit test 
+    - make runUnitServer 
+
+# unit test client
+unit test client:
+  stage: test
+  script:
+    # compile test server 
+    - make testClient 
+    # run unit test 
+    - make runUnitClient
+
+    
